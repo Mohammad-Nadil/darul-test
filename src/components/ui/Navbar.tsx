@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function page(): React.JSX.Element {
+export default function Navbar() {
   return (
     <div>
       
