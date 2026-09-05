@@ -1,12 +1,12 @@
 import React from "react";
-// import Navbar from "../ui/Navbar";
 import TopBar from "../ui/TopBar";
+import Navbar from "../ui/Navbar";
 
 export default function Header() {
   return (
     <header id="header" className="w-full">
       <TopBar />
-      {/* <Navbar /> */}
+      <Navbar />
     </header>
   );
 }
