@@ -85,7 +85,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full overflow-hidden border-t border-border bg-background py-12 text-foreground">
+    <footer className="relative w-full overflow-hidden border-t border-border bg-primary/5 pt-10 text-foreground">
       <Container>
         <div className="grid grid-cols-1 gap-8 border-b border-border pb-8 md:grid-cols-2 lg:grid-cols-12">
           <div className="flex flex-col gap-6 lg:col-span-4">
@@ -138,7 +138,7 @@ export default function Footer() {
             <h4 className="relative mb-6 select-none font-sans text-xs font-bold tracking-widest text-foreground">
               {cleanData.contact}
 
-              <span className="absolute bottom-[-6px] left-0 h-0.5 w-6 rounded-full bg-accent" />
+              <span className="absolute -bottom-2 left-0 h-0.5 w-6 rounded-full bg-accent" />
             </h4>
 
             <ul className="flex flex-col gap-4.5">
@@ -209,7 +209,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 pt-6 sm:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 py-3 sm:flex-row">
           <p className="select-none text-center font-sans text-xs font-light text-muted sm:text-left">
             &copy; {currentYear} {siteConfig.name}. {cleanData.rights}
           </p>

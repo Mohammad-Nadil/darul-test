@@ -6,8 +6,8 @@ import Container from "../layout/Container";
 
 const TopBar = () => {
   return (
-    <div className="hidden sm:block w-full bg-primary text-white border-b border-white/10 py-2">
-      <Container className="flex justify-between items-center text-xs font-medium tracking-wide">
+    <header className="hidden sm:block w-full bg-primary text-white border-b border-white/10 py-2">
+      <Container className="flex justify-between items-center text-sm font-medium tracking-wide">
         <div className="flex items-center gap-6">
           <a
             href={`mailto:${siteConfig.contact.email}`}
@@ -28,11 +28,11 @@ const TopBar = () => {
           </a>
         </div>
 
-        <div className="font-serif tracking-wider text-accent drop-shadow-xs select-none">
+        <div className=" tracking-wider text-accent drop-shadow-xs select-none ">
           {siteConfig.slogan}
         </div>
       </Container>
-    </div>
+    </header>
   );
 };
 

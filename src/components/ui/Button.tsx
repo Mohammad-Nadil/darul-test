@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { ReactNode, CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 type ButtonSize = "sm" | "md" | "lg";
 
@@ -12,15 +12,12 @@ interface ButtonProps {
   flairColor?: string;
   textColor?: string;
   textHoverColor?: string;
-
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
-
   onClick?: () => void;
   href?: string;
   target?: "_self" | "_blank" | "_parent" | "_top";
   disabled?: boolean;
-
   size?: ButtonSize;
   className?: string;
   ariaLabel?: string;
@@ -55,11 +52,11 @@ export default function Button({
   };
 
   const sharedClasses = [
-    "relative inline-flex items-center justify-center overflow-hidden",
+    "group relative inline-flex items-center justify-center overflow-hidden",
     "rounded-full border text-center select-none",
-    "transition-all duration-500 ease-out active:scale-95 group",
+    "transition-all duration-500 ease-out active:scale-95",
     disabled
-      ? "opacity-50 cursor-not-allowed pointer-events-none"
+      ? "pointer-events-none cursor-not-allowed opacity-50"
       : "cursor-pointer hover:scale-[1.03]",
     sizeMap[size],
     className,
@@ -75,12 +72,12 @@ export default function Button({
       <span
         aria-hidden="true"
         style={{ backgroundColor: flairColor }}
-        className="absolute inset-0 z-0 h-full w-full origin-center scale-0 rounded-full opacity-0 pointer-events-none transition-all duration-500 ease-out group-hover:scale-100 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full origin-center scale-0 rounded-full opacity-0 transition-all duration-500 ease-out group-hover:scale-100 group-hover:opacity-100"
       />
 
       <span
         style={textStyles}
-        className="relative z-10 inline-flex items-center gap-[inherit] whitespace-nowrap leading-none  transition-colors duration-300 "
+        className="relative z-10 inline-flex items-center gap-[inherit] whitespace-nowrap leading-none text-[var(--text-color)] transition-colors duration-300 group-hover:text-[var(--text-hover)]"
       >
         {leftIcon && (
           <span className="inline-flex items-center text-[1.15em]">

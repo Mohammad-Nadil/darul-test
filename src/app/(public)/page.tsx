@@ -1,19 +1,19 @@
-// import FeaturedNotice from "@/components/layout/home/FeaturedNotice";
-// import HeroBanner from "@/components/layout/home/HeroBanner";
-// import HifzHighlights from "@/components/layout/home/HifzHighlights";
-// import OurFacilities from "@/components/layout/home/OurFacilities";
-// import WelcomeMassage from "@/components/layout/home/WelcomeMassage";
 import React from "react";
+
+import Hero from "@/src/components/home/Hero";
+import OurFacilities from "@/src/components/home/OurFacilities";
+import WelcomeMessage from "@/src/components/home/WelcomeMessage";
+import FeaturedNotices from "@/src/components/home/FeaturedNotices";
+
 
 export default function Homepage() {
   return (
     <main className="w-full  bg-background text-foreground ">
-      {/* <HeroBanner /> */}
-      {/* <WelcomeMassage /> */}
-      {/* <OurFacilities /> */}
-      {/* <FeaturedNotice /> */}
+      <Hero />
+      <WelcomeMessage />
+      <OurFacilities />
+      <FeaturedNotices />
       {/* <HifzHighlights /> */}
-      <div className="h-screen"></div>
     </main>
   );
 }
