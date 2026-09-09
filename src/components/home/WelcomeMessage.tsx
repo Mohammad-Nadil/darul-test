@@ -109,7 +109,7 @@ export default function WelcomeMessage() {
               <div className="welcome-image relative aspect-[4/3] overflow-hidden rounded-2xl sm:aspect-[5/4]">
                 <Image
                   src="/images/assets/banner1.jpg"
-                  alt="দারুল হুদা মাদরাসা"
+                  alt="মাদ্রাসা-ই-দারুল হুদা"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -120,7 +120,7 @@ export default function WelcomeMessage() {
                 <div className="relative aspect-[4/3]">
                   <Image
                     src="/images/assets/banner2.jpg"
-                    alt="দারুল হুদা মাদরাসার পরিবেশ"
+                    alt="মাদ্রাসা-ই-দারুল হুদার পরিবেশ"
                     fill
                     sizes="(max-width: 1024px) 50vw, 30vw"
                     className="object-cover"

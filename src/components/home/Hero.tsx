@@ -86,7 +86,7 @@ export default function Hero() {
             >
               <Image
                 src={assignedImage}
-                alt="দারুল হুদা মাদরাসা"
+                alt="মাদ্রাসা-ই-দারুল হুদা"
                 fill
                 priority={index === 0}
                 sizes="100vw"
@@ -128,7 +128,7 @@ export default function Hero() {
               borderColor="var(--color-primary)"
               flairColor="var(--color-primary)"
               textColor="#ffffff"
-              textHoverColor="#032d22"
+              textHoverColor="#ffffff"
               rightIcon={<FiArrowRight />}
             />
           </div>

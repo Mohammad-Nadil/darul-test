@@ -11,12 +11,14 @@ type Props = {
   label: string;
   headingLine1: string;
   headingLine2: string;
+  className?: string;
 };
 
 export default function SectionHeader({
   label,
   headingLine1,
   headingLine2,
+  className = "",
 }: Props) {
   const headerRef = useRef<HTMLDivElement>(null);
 
@@ -80,7 +82,7 @@ export default function SectionHeader({
   );
 
   return (
-    <div ref={headerRef} className="max-w-2xl">
+    <div ref={headerRef} className={`max-w-3xl  ${className}`}>
       <div className="mb-5 flex items-center gap-3">
         <span className="section-line h-px w-8 bg-accent" />
 

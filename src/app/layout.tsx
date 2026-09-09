@@ -20,11 +20,11 @@ const notoSerifBengali = Noto_Serif_Bengali({
 
 export const metadata: Metadata = {
   title: {
-    default: "দারুল হুদা মাদরাসা",
-    template: "%s | দারুল হুদা মাদরাসা",
+    default: "মাদ্রাসা-ই-দারুল হুদা",
+    template: "%s | মাদ্রাসা-ই-দারুল হুদা ",
   },
   description:
-    "দারুল হুদা মাদরাসা — ইসলামী ও আধুনিক শিক্ষার সমন্বিত একটি শিক্ষা প্রতিষ্ঠান।",
+    "মাদ্রাসা-ই-দারুল হুদা — ইসলামী ও আধুনিক শিক্ষার সমন্বিত একটি শিক্ষা প্রতিষ্ঠান।",
 };
 
 export default function PublicLayout({

@@ -2,13 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import Container from "../layout/Container";
 import Button from "./Button";
 
 import logo from "@/public/images/brand/logo.webp";
+import { siteConfig } from "@/src/config/site";
 
-const menuItems = [
+type MenuItem = {
+  name: string;
+  href: string;
+};
+
+const menuItems: MenuItem[] = [
   { name: "হোম", href: "/" },
   { name: "আমাদের সম্পর্কে", href: "/about" },
   { name: "একাডেমিকস", href: "/academics" },
@@ -51,7 +57,7 @@ export default function Navbar() {
                 <div className="relative h-10 w-10 sm:h-12 sm:w-12">
                   <Image
                     src={logo}
-                    alt="দারুল হুদা মাদরাসা"
+                    alt={siteConfig.name}
                     fill
                     priority
                     sizes="(max-width: 640px) 40px, 48px"
@@ -61,11 +67,11 @@ export default function Navbar() {
 
                 <div className="flex flex-col">
                   <span className="font-serif font-bold leading-tight tracking-wide text-primary text-xl">
-                    দারুল হুদা মাদরাসা
+                    {siteConfig.name}
                   </span>
 
                   <span className="mt-0.5 text-[10px] sm:text-xs  tracking-wide  ">
-                    ইসলামী ও আধুনিক শিক্ষা প্রতিষ্ঠান
+                    {siteConfig.slogan}
                   </span>
                 </div>
               </Link>

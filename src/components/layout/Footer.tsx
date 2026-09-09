@@ -197,7 +197,7 @@ export default function Footer() {
               <div className="group relative h-36 w-full overflow-hidden rounded-2xl border border-border shadow-sm transition-all duration-500 hover:shadow-md">
                 <iframe
                   src={siteConfig.contact.googleMapsLink}
-                  title="দারুল হুদা মাদরাসার অবস্থান"
+                  title="দারুমাদ্রাসা-ই-দারুল হুদার অবস্থান"
                   loading="lazy"
                   referrerPolicy="strict-origin-when-cross-origin"
                   className="h-full w-full border-0 transition-transform duration-700 group-hover:scale-[1.03]"

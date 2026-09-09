@@ -5,11 +5,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  FiArrowUpRight,
-  FiCalendar,
-  FiFileText,
-} from "react-icons/fi";
+import { FiArrowUpRight, FiCalendar } from "react-icons/fi";
 
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
@@ -57,28 +53,29 @@ export default function FeaturedNotice() {
   useGSAP(
     () => {
       const section = sectionRef.current;
-
       if (!section) return;
 
       const items = section.querySelectorAll(".notice-item");
 
-      gsap.set(items, {
-        opacity: 0,
-        y: 24,
-      });
-
-      gsap.to(items, {
-        opacity: 1,
-        y: 0,
-        duration: 0.65,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 78%",
-          once: true,
+      gsap.fromTo(
+        items,
+        {
+          opacity: 0,
+          y: 18,
         },
-      });
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 82%",
+            once: true,
+          },
+        }
+      );
     },
     { scope: sectionRef }
   );
@@ -89,109 +86,107 @@ export default function FeaturedNotice() {
   return (
     <section
       ref={sectionRef}
-      className="overflow-hidden bg-background py-20 sm:py-24 lg:py-28"
+      className="bg-background py-20 sm:py-24 lg:py-28"
     >
       <Container>
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             label="ঘোষণা ও নোটিশ"
             headingLine1="সর্বশেষ গুরুত্বপূর্ণ"
             headingLine2="নোটিশ ও ঘোষণা"
           />
 
-          <p className="max-w-md text-sm leading-7 text-foreground/60 sm:text-base">
-            মাদরাসার ভর্তি, একাডেমিক কার্যক্রম এবং অন্যান্য গুরুত্বপূর্ণ
-            বিষয়ে সর্বশেষ তথ্য ও ঘোষণা এখানে প্রকাশ করা হয়।
+          <p className="max-w-sm text-sm leading-7 text-foreground/55 sm:text-base">
+            মাদরাসার ভর্তি, একাডেমিক কার্যক্রম ও গুরুত্বপূর্ণ
+            বিষয়সমূহের সর্বশেষ তথ্য।
           </p>
         </div>
 
-        <div className="mt-12 lg:mt-16">
-          <Link
-            href={`/notices/${featuredNotice.id}`}
-            className="notice-item group block rounded-2xl border border-border p-7 transition-all duration-300 hover:border-accent hover:bg-accent/[0.03] sm:p-9 lg:p-10"
-          >
-            <div className="flex flex-col gap-7 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
-              <div className="min-w-0 flex-1">
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                  <span className="text-sm font-semibold text-accent">
-                    {featuredNotice.category}
-                  </span>
-
-                  <span className="h-1 w-1 rounded-full bg-border" />
-
-                  <span className="flex items-center gap-2 text-sm text-foreground/45">
-                    <FiCalendar className="h-3.5 w-3.5" />
-                    {featuredNotice.date}
-                  </span>
-                </div>
-
-                <h3 className="mt-5 max-w-4xl font-serif text-2xl font-semibold leading-tight tracking-tight text-foreground transition-colors duration-300 group-hover:text-primary sm:text-3xl lg:text-[2.5rem]">
-                  {featuredNotice.title}
-                </h3>
-
-                {featuredNotice.description && (
-                  <p className="mt-4 max-w-3xl text-sm leading-7 text-foreground/55 sm:text-base">
-                    {featuredNotice.description}
-                  </p>
-                )}
-              </div>
-
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border text-primary transition-all duration-300 group-hover:border-accent group-hover:bg-accent group-hover:text-background lg:mt-1">
-                <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
-            </div>
-          </Link>
-
-          <div className="mt-5 flex flex-col gap-5 md:flex-row">
-            {secondaryNotices.map((notice) => (
-              <Link
-                key={notice.id}
-                href={`/notices/${notice.id}`}
-                className="notice-item group flex min-w-0 flex-1 flex-col rounded-2xl border border-border p-6 transition-all duration-300 hover:border-accent hover:bg-accent/[0.03] sm:p-7"
-              >
-                <div className="flex items-center justify-between gap-4">
-                  <span className="flex items-center gap-2 text-xs text-foreground/45 sm:text-sm">
-                    <FiCalendar className="h-3.5 w-3.5 text-accent" />
-                    {notice.date}
-                  </span>
-
-                  <FiFileText className="h-4 w-4 text-foreground/25 transition-colors duration-300 group-hover:text-accent" />
-                </div>
-
-                <span className="mt-6 text-xs font-semibold text-accent">
-                  {notice.category}
+        <div className="mt-14 border-t border-border lg:mt-16">
+          <div className="flex flex-col lg:flex-row">
+            {/* Featured */}
+            <Link
+              href={`/notices/${featuredNotice.id}`}
+              className="notice-item group flex w-full flex-col py-8 sm:py-10 lg:w-[55%] lg:border-r lg:pr-14 lg:py-12"
+            >
+              <div className="flex items-center gap-3 text-xs sm:text-sm">
+                <span className="font-semibold text-accent">
+                  {featuredNotice.category}
                 </span>
 
-                <h4 className="mt-2 font-serif text-lg font-semibold leading-snug text-foreground transition-colors duration-300 group-hover:text-primary sm:text-xl">
-                  {notice.title}
-                </h4>
+                <span className="h-px w-5 bg-border" />
 
-                {notice.description && (
-                  <p className="mt-3 line-clamp-2 text-sm leading-6 text-foreground/50">
-                    {notice.description}
-                  </p>
-                )}
+                <span className="flex items-center gap-2 text-foreground/40">
+                  <FiCalendar className="h-3.5 w-3.5" />
+                  {featuredNotice.date}
+                </span>
+              </div>
 
-                <div className="mt-6 flex items-center gap-2 text-xs font-semibold text-primary">
-                  বিস্তারিত দেখুন
-                  <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </div>
-              </Link>
-            ))}
-          </div>
+              <h3 className="mt-6 max-w-2xl font-serif text-2xl font-semibold leading-[1.3] tracking-tight text-foreground transition-colors duration-300 group-hover:text-primary sm:text-3xl lg:text-[2.6rem]">
+                {featuredNotice.title}
+              </h3>
 
-          <div className="notice-item mt-8 flex justify-end">
-            <Link
-              href="/notices"
-              className="group inline-flex items-center gap-3 text-sm font-semibold text-primary transition-colors duration-300 hover:text-accent"
-            >
-              সকল নোটিশ দেখুন
+              {featuredNotice.description && (
+                <p className="mt-5 max-w-xl text-sm leading-7 text-foreground/50 sm:text-base">
+                  {featuredNotice.description}
+                </p>
+              )}
 
-              <span className="flex h-8 w-8 items-center justify-center rounded-full border border-border transition-all duration-300 group-hover:border-accent group-hover:bg-accent group-hover:text-background">
-                <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
+              <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-primary">
+                বিস্তারিত দেখুন
+                <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </div>
             </Link>
+
+            {/* Secondary */}
+            <div className="flex w-full flex-col lg:w-[45%] lg:pl-14">
+              {secondaryNotices.map((notice, index) => (
+                <Link
+                  key={notice.id}
+                  href={`/notices/${notice.id}`}
+                  className={`notice-item group flex flex-col py-8 sm:py-9 lg:py-10 ${
+                    index === 0 ? "border-b border-border" : ""
+                  }`}
+                >
+                  <div className="flex items-center gap-3 text-xs sm:text-sm">
+                    <span className="font-semibold text-accent">
+                      {notice.category}
+                    </span>
+
+                    <span className="h-px w-4 bg-border" />
+
+                    <span className="text-foreground/40">
+                      {notice.date}
+                    </span>
+                  </div>
+
+                  <div className="mt-4 flex items-start justify-between gap-5">
+                    <h4 className="max-w-lg font-serif text-xl font-semibold leading-snug text-foreground transition-colors duration-300 group-hover:text-primary sm:text-2xl">
+                      {notice.title}
+                    </h4>
+
+                    <FiArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-foreground/25 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent" />
+                  </div>
+
+                  {notice.description && (
+                    <p className="mt-3 max-w-lg text-sm leading-6 text-foreground/45">
+                      {notice.description}
+                    </p>
+                  )}
+                </Link>
+              ))}
+            </div>
           </div>
+        </div>
+
+        <div className="flex justify-end border-t border-border pt-6">
+          <Link
+            href="/notices"
+            className="group flex items-center gap-2 text-sm font-semibold text-primary transition-colors duration-300 hover:text-accent"
+          >
+            সকল নোটিশ
+            <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </Link>
         </div>
       </Container>
     </section>
