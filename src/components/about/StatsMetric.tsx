@@ -1,13 +1,11 @@
 "use client";
 import React, { useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { FiBookOpen, FiHeart, FiShield, FiUserCheck } from "react-icons/fi";
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
 }
 const principles = [
   {
@@ -44,22 +42,9 @@ export default function EducationPrinciples() {
     () => {
       const section = sectionRef.current;
       if (!section) return;
-      const heading = section.querySelector(".principles-heading");
       const statement = section.querySelector(".principles-statement");
       const items = section.querySelectorAll(".principle-item");
-      if (heading) {
-        gsap.fromTo(
-          heading,
-          { opacity: 0, y: 24 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power3.out",
-            scrollTrigger: { trigger: heading, start: "top 85%", once: true },
-          },
-        );
-      }
+
       if (statement) {
         gsap.fromTo(
           statement,

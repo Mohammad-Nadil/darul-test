@@ -40,7 +40,7 @@ export default function AboutPage() {
       <AboutHero />
       <OurStory />
       <LeadershipTeam />
-       <Departments />
+      <Departments />
       <StatsMetric />
     </main>
   );

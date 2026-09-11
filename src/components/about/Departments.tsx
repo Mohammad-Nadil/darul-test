@@ -4,12 +4,9 @@ import Image from "next/image";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const departments = [
   {
@@ -65,29 +62,7 @@ export default function Departments() {
 
       if (!section) return;
 
-      const heading = section.querySelector(".department-heading");
       const cards = section.querySelectorAll(".department-card");
-
-      if (heading) {
-        gsap.fromTo(
-          heading,
-          {
-            opacity: 0,
-            y: 20,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: heading,
-              start: "top 85%",
-              once: true,
-            },
-          },
-        );
-      }
 
       gsap.fromTo(
         cards,
@@ -119,14 +94,12 @@ export default function Departments() {
       className="relative w-full overflow-hidden bg-subtle py-20 text-foreground transition-colors duration-500 md:py-28"
     >
       <Container>
-        <div className="department-heading">
-          <SectionHeader
-            label="আমাদের বিভাগসমূহ"
-            headingLine1="দ্বীনি শিক্ষা"
-            headingLine2=" বিভিন্ন ধাপে"
-            className="mx-auto mb-10 flex w-full flex-col items-center text-center"
-          />
-        </div>
+        <SectionHeader
+          label="আমাদের বিভাগসমূহ"
+          headingLine1="দ্বীনি শিক্ষা"
+          headingLine2=" বিভিন্ন ধাপে"
+          className="mx-auto mb-10 flex w-full flex-col items-center text-center"
+        />
 
         <div className="relative z-10 mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {departments.map((item) => (
@@ -140,7 +113,7 @@ export default function Departments() {
                   alt={item.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
-                  className="object-cover contrast-[1.01] group-hover:blur-xs blur-none transition-all duration-1000"
+                  className="object-cover contrast-[1.01] blur-0 transition-[filter] duration-1000 ease-in-out md:group-hover:blur-[3px]"
                 />
               </div>
 

@@ -4,11 +4,10 @@ import Image from "next/image";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiArrowUpRight } from "react-icons/fi";
 import Container from "@/src/components/layout/Container";
+import SectionHeader from "../ui/SectionHeader";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const leaders = [
   {
@@ -43,29 +42,8 @@ export default function LeadershipTeam() {
 
       if (!section) return;
 
-      const heading = section.querySelector(".leadership-heading");
       const leaders = section.querySelectorAll(".leader-card");
 
-      if (heading) {
-        gsap.fromTo(
-          heading,
-          {
-            opacity: 0,
-            y: 20,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: heading,
-              start: "top 85%",
-              once: true,
-            },
-          },
-        );
-      }
 
       gsap.fromTo(
         leaders,
@@ -98,22 +76,12 @@ export default function LeadershipTeam() {
     >
       <Container>
         {/* Header */}
-        <div className="leadership-heading mx-auto max-w-3xl text-center">
-          <div className="flex items-center justify-center gap-3">
-            <div className=" text-2xl text-accent/40">۞</div>
-
-            <span className="text-xs font-semibold tracking-wide text-accent sm:text-sm">
-              নেতৃত্ব ও শিক্ষকবৃন্দ
-            </span>
-
-            <div className=" text-2xl text-accent/40">۞</div>
-          </div>
-
-          <h2 className="mt-2 font-serif text-3xl font-semibold  tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            যাদের জ্ঞান ও নেতৃত্বে
-            <span className="block text-primary">এগিয়ে চলেছে দারুল হুদা</span>
-          </h2>
-        </div>
+        <SectionHeader
+          label="নেতৃত্ব ও শিক্ষকবৃন্দ"
+          headingLine1="যাদের জ্ঞান ও নেতৃত্বে"
+          headingLine2="এগিয়ে চলেছে দারুল হুদা"
+          className=" text-center w-full! mx-auto mb-10 flex flex-col items-center justify-center"  
+        />
 
         {/* Leaders */}
         <div className="mt-12 flex flex-col items-center justify-evenly gap-12 sm:mt-14 sm:flex-row sm:items-start sm:gap-6 ">
@@ -136,7 +104,6 @@ export default function LeadershipTeam() {
 
                 {/* Islamic ring */}
                 <div className="pointer-events-none absolute -inset-2 rounded-full border border-transparent transition-all duration-700 group-hover:border-accent/30 group-hover:rotate-6" />
-
               </div>
 
               {/* Content */}

@@ -3,14 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 
-gsap.registerPlugin(ScrollTrigger);
 
 type Facility = {
   id: string;
@@ -51,96 +46,9 @@ const facilities: Facility[] = [
 ];
 
 export default function OurFacilities() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const section = sectionRef.current;
-
-      if (!section) return;
-
-      const label = section.querySelector(".facilities-label");
-      const heading = section.querySelector(".facilities-heading");
-      const description = section.querySelector(".facilities-description");
-      const cards = section.querySelectorAll(".facility-card");
-      const button = section.querySelector(".facilities-button");
-
-      if (!label || !heading || !description || !button || !cards.length) {
-        return;
-      }
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "top 75%",
-          once: true,
-        },
-      });
-
-      gsap.set([label, heading, description, button], {
-        opacity: 0,
-        y: 25,
-      });
-
-      gsap.set(cards, {
-        opacity: 0,
-        y: 40,
-      });
-
-      tl.to(label, {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        ease: "power2.out",
-      })
-        .to(
-          heading,
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power3.out",
-          },
-          "-=0.35",
-        )
-        .to(
-          description,
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.65,
-            ease: "power2.out",
-          },
-          "-=0.45",
-        )
-        .to(
-          cards,
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-            stagger: 0.12,
-            ease: "power3.out",
-          },
-          "-=0.25",
-        )
-        .to(
-          button,
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: "power2.out",
-          },
-          "-=0.3",
-        );
-    },
-    { scope: sectionRef },
-  );
 
   return (
     <section
-      ref={sectionRef}
       className="facilities-section bg-primary/5 py-20 sm:py-24"
     >
       <Container>

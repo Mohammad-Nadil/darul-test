@@ -5,11 +5,9 @@ import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const highlights: string[] = [
   "কুরআন ও সুন্নাহভিত্তিক শিক্ষা",

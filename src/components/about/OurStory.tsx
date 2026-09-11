@@ -1,16 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FiArrowUpRight, FiBookOpen, FiEye, FiTarget } from "react-icons/fi";
+import {  FiBookOpen, FiEye, FiTarget } from "react-icons/fi";
 
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const principles = [
   {
@@ -34,62 +30,9 @@ const principles = [
 ];
 
 export default function OurStory() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const section = sectionRef.current;
-
-      if (!section) return;
-
-      const revealItems = section.querySelectorAll(".story-reveal");
-      const image = section.querySelector(".story-image");
-
-      gsap.fromTo(
-        revealItems,
-        {
-          opacity: 0,
-          y: 20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
-          stagger: 0.08,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 82%",
-            once: true,
-          },
-        },
-      );
-
-      if (image) {
-        gsap.fromTo(
-          image,
-          {
-            scale: 1.06,
-          },
-          {
-            scale: 1,
-            duration: 1.2,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: image,
-              start: "top 88%",
-              once: true,
-            },
-          },
-        );
-      }
-    },
-    { scope: sectionRef },
-  );
 
   return (
     <section
-      ref={sectionRef}
       id="our-story"
       className="overflow-hidden bg-background py-16 sm:py-20 lg:py-24"
     >
@@ -177,7 +120,7 @@ export default function OurStory() {
                   </div>
 
                   <div>
-                    <span className="text-[11px]  font-semibold tracking-widest text-accent">
+                    <span className="text-[11px]  font-semibold tracking-widest text-primary">
                       MISSION
                     </span>
 
@@ -231,7 +174,7 @@ export default function OurStory() {
         <div className="story-reveal mt-10">
           <div className="mb-6 flex items-end justify-between gap-5">
             <div>
-              <span className="text-xs font-semibold text-accent sm:text-sm">
+              <span className="text-xs font-semibold text-primary sm:text-sm">
                 আমাদের ভিত্তি
               </span>
 
@@ -240,7 +183,7 @@ export default function OurStory() {
               </h3>
             </div>
 
-            <span className="hidden text-2xl text-accent/40 sm:block">۞</span>
+            <span className="hidden text-2xl text-primary/40 sm:block">۞</span>
           </div>
 
           <div className="flex flex-col border-t border-border lg:flex-row">
@@ -257,7 +200,7 @@ export default function OurStory() {
                   }`}
                 >
                   <div className="flex items-center  gap-5">
-                    <Icon className="h-4 w-4 text-accent" />
+                    <Icon className="h-4 w-4 text-primary" />
                     <h4 className=" font-serif text-xl font-semibold text-foreground">
                       {item.title}
                     </h4>

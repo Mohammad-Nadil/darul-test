@@ -3,9 +3,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
   label: string;
@@ -83,7 +81,7 @@ export default function SectionHeader({
 
   return (
     <div ref={headerRef} className={`max-w-3xl  ${className}`}>
-      <div className="mb-5 flex items-center gap-3">
+      <div className="lg:mb-3 flex items-center gap-3">
         <span className="section-line h-px w-8 bg-accent" />
 
         <span className="section-label text-sm font-semibold text-accent">

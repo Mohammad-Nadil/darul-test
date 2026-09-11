@@ -1,16 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiArrowUpRight, FiCalendar } from "react-icons/fi";
 
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 
-gsap.registerPlugin(ScrollTrigger);
 
 type Notice = {
   id: number;
@@ -48,44 +43,12 @@ const notices: Notice[] = [
 ];
 
 export default function FeaturedNotice() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      const section = sectionRef.current;
-      if (!section) return;
-
-      const items = section.querySelectorAll(".notice-item");
-
-      gsap.fromTo(
-        items,
-        {
-          opacity: 0,
-          y: 18,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 82%",
-            once: true,
-          },
-        }
-      );
-    },
-    { scope: sectionRef }
-  );
 
   const featuredNotice = notices[0];
   const secondaryNotices = notices.slice(1);
 
   return (
     <section
-      ref={sectionRef}
       className="bg-background py-20 sm:py-24 lg:py-28"
     >
       <Container>
