@@ -5,6 +5,10 @@ import SmoothScrollProvider from "@/src/providers/SmoothScrollProvider";
 import "./globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const notoSansBengali = Noto_Sans_Bengali({
   variable: "--font-bengali-sans",

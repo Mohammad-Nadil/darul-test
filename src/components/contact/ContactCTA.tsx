@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FiArrowUpRight, FiPhone } from "react-icons/fi";
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
+import { siteConfig } from "@/src/config/site";
 
 export default function ContactCTA() {
   return (
@@ -12,7 +13,7 @@ export default function ContactCTA() {
       className="w-full bg-background  text-foreground "
     >
       <Container>
-        <div className="contact-cta-content relative overflow-hidden rounded-2xl border border-border bg-subtle px-3 pt-12 sm:px-10 sm:pt-14 lg:px-16 lg:pt-16">
+        <div className="contact-cta-content relative overflow-hidden rounded-2xl border border-border bg-subtle px-3 py-12 sm:px-10 sm:py-14 ">
           {/* Subtle decorative accent */}
           <span className="pointer-events-none absolute -right-8 -top-10 font-serif text-[150px] leading-none text-primary/[0.025]">
             ۞
@@ -37,7 +38,7 @@ export default function ContactCTA() {
             {/* Actions */}
             <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
               <Link
-                href="#contact-inquiry"
+                href="/contact"
                 className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-semibold text-background transition-colors duration-300 hover:bg-primary/90"
               >
                 বার্তা পাঠান
@@ -45,7 +46,7 @@ export default function ContactCTA() {
               </Link>
 
               <Link
-                href="tel:+8801XXXXXXXXX"
+                href={`tel:${siteConfig.contact.phone.replace(/\s/g, "")}`}
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-lg border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors duration-300 hover:border-primary/30 hover:text-primary"
               >
                 <FiPhone className="h-4 w-4" />

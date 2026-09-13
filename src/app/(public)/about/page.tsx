@@ -15,16 +15,9 @@ import React from "react";
 // import MissionVision from "@/components/layout/about/MissionVision";
 
 export const metadata = {
-  title: `About Us | ${siteConfig.name}`,
-  description: `${siteConfig.slogan}. Learn more about Al-Arafah Islamic International School & College—our mission, Cambridge curriculum, and Islamic Tarbiyah.`,
-  keywords: [
-    "Al-Arafah",
-    "Islamic International School",
-    "Cambridge School Dhaka",
-    "Hazaribag School",
-    "Hifz Program",
-    "Modern Islamic Education",
-  ],
+  title: `  | ${siteConfig.name}`,
+  description: `${siteConfig.slogan}. .`,
+  keywords: [],
   openGraph: {
     title: `About Us | ${siteConfig.name}`,
     description: siteConfig.slogan,
