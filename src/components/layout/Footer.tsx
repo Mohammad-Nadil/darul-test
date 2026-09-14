@@ -141,7 +141,7 @@ export default function Footer() {
               <span className="absolute -bottom-2 left-0 h-0.5 w-6 rounded-full bg-accent" />
             </h4>
 
-            <ul className="flex flex-col gap-4.5">
+            <ul className="flex flex-col gap-3 lg:gap-4.5">
               {siteConfig.contact.address && (
                 <li className="group flex items-start gap-3.5">
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary-light transition-colors duration-300 group-hover:bg-primary/10">

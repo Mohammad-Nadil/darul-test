@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
+import { ScrollTrigger } from "gsap/all";
 
 
 const highlights: string[] = [
@@ -14,6 +15,9 @@ const highlights: string[] = [
   "নৈতিকতা ও চরিত্র গঠনে গুরুত্ব",
   "দ্বীনি ও আধুনিক শিক্ষার সমন্বয়",
 ];
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 export default function WelcomeMessage() {
   useGSAP(() => {
