@@ -109,7 +109,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="js-hero-content-anim text-2xl  sm:text-5xl md:text-6xl xl:text-8xl font-serif font-semibold text-white tracking-wide leading-[1.15]">
+          <h1 className="js-hero-content-anim text-2xl  sm:text-5xl md:text-6xl xl:text-[85px] font-serif font-semibold text-white tracking-wide leading-[1.15]">
             <>
               {cleanData.slides[currentSlide].titleLine1}
               <br />
