@@ -7,7 +7,7 @@ export const siteConfig = {
     phone: "01970867755",
     phoneFormatted: "01970 867 755",
 
-    email: "email placeholder",
+    email: "madrasa.darulhuda.dhaka@gmail.com",
 
     address: "২০৯/৪ বিজিবি ২নং গেট, লালবাগ, ঢাকা-১২০৫ ",
 

@@ -9,7 +9,6 @@ import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 import { ScrollTrigger } from "gsap/all";
 
-
 const highlights: string[] = [
   "কুরআন ও সুন্নাহভিত্তিক শিক্ষা",
   "নৈতিকতা ও চরিত্র গঠনে গুরুত্ব",
@@ -17,7 +16,6 @@ const highlights: string[] = [
 ];
 
 gsap.registerPlugin(ScrollTrigger);
-
 
 export default function WelcomeMessage() {
   useGSAP(() => {
@@ -27,8 +25,6 @@ export default function WelcomeMessage() {
 
     const imageWrapper = section.querySelector(".welcome-image");
     const secondImage = section.querySelector(".welcome-second-image");
-    const label = section.querySelector(".welcome-label");
-    const heading = section.querySelector(".welcome-heading");
     const paragraphs = section.querySelectorAll(".welcome-paragraph");
     const highlights = section.querySelectorAll(".welcome-highlight");
     const button = section.querySelector(".welcome-button");
@@ -108,7 +104,7 @@ export default function WelcomeMessage() {
         <div className="flex flex-col items-center gap-14 lg:flex-row lg:items-center lg:gap-20">
           <div className="w-full lg:w-2/5">
             <div className="relative">
-              <div className="welcome-image relative aspect-[4/3] overflow-hidden rounded-2xl sm:aspect-[5/4]">
+              <div className="welcome-image relative aspect-4/3 overflow-hidden rounded-2xl sm:aspect-5/4">
                 <Image
                   src="/images/assets/banner1.jpg"
                   alt="মাদ্রাসা-ই-দারুল হুদা"
@@ -119,7 +115,7 @@ export default function WelcomeMessage() {
               </div>
 
               <div className="welcome-second-image absolute -bottom-8 right-5 w-[58%] overflow-hidden rounded-2xl border-8 border-background shadow-xl sm:right-8">
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-4/3">
                   <Image
                     src="/images/assets/banner2.jpg"
                     alt="মাদ্রাসা-ই-দারুল হুদার পরিবেশ"
@@ -163,7 +159,7 @@ export default function WelcomeMessage() {
                     className="welcome-highlight flex flex-1 items-center gap-3"
                   >
                     <span className="shrink-0 font-serif text-lg font-semibold text-accent">
-                      0{index + 1}
+                      ۞
                     </span>
 
                     <p className="text-sm font-medium text-foreground">
