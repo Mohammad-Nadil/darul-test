@@ -120,7 +120,7 @@ export default function OurStory() {
                   </div>
 
                   <div>
-                    <span className="text-[11px]  font-semibold tracking-widest text-primary">
+                    <span className="text-[11px]  font-semibold  text-primary">
                       MISSION
                     </span>
 

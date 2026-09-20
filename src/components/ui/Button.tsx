@@ -47,8 +47,8 @@ export default function Button({
 }: ButtonProps) {
   const sizeMap: Record<ButtonSize, string> = {
     sm: "px-5 py-2 text-[13px] gap-1.5 font-medium",
-    md: "px-7 py-3 text-[14px] gap-2 font-semibold tracking-wide",
-    lg: "px-9 py-4 text-base gap-2.5 font-bold tracking-wider",
+    md: "px-7 py-3 text-[14px] gap-2 font-semibold ",
+    lg: "px-9 py-4 text-base gap-2.5 font-bold ",
   };
 
   const sharedClasses = [

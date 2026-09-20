@@ -85,7 +85,7 @@ export default function FeaturedNotice() {
                 </span>
               </div>
 
-              <h3 className="mt-6 max-w-2xl font-serif text-2xl font-semibold leading-[1.3] tracking-tight text-foreground transition-colors duration-300 group-hover:text-primary sm:text-3xl lg:text-[2.6rem]">
+              <h3 className="mt-6 max-w-2xl font-serif text-2xl font-semibold leading-[1.3]  text-foreground transition-colors duration-300 group-hover:text-primary sm:text-3xl lg:text-[2.6rem]">
                 {featuredNotice.title}
               </h3>
 

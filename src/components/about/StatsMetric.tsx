@@ -93,7 +93,7 @@ export default function EducationPrinciples() {
             <span className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 bg-subtle px-5 font-serif text-2xl text-primary/25">
               ۞
             </span>
-            <p className="mx-auto max-w-4xl font-serif text-2xl font-semibold  tracking-tight text-foreground sm:text-3xl lg:text-4xl">
+            <p className="mx-auto max-w-4xl font-serif text-2xl font-semibold   text-foreground sm:text-3xl lg:text-4xl">
               “শিক্ষার উদ্দেশ্য শুধু জ্ঞান অর্জন নয়,
               <span className="text-primary">জ্ঞানকে জীবনে ধারণ করাও।”</span>
             </p>
@@ -114,11 +114,11 @@ export default function EducationPrinciples() {
                     <div className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-primary transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-background">
                       <Icon className="text-[17px]" />
                     </div>
-                    <span className="font-serif text-[11px] font-semibold tracking-widest text-foreground/20 transition-colors duration-300 group-hover:text-primary/40">
+                    <span className="font-serif text-[11px] font-semibold  text-foreground/20 transition-colors duration-300 group-hover:text-primary/40">
                       {item.id}
                     </span>
                   </div>
-                  <h3 className="mt-7 font-serif text-lg font-semibold tracking-tight text-foreground transition-colors duration-300 group-hover:text-primary sm:text-xl">
+                  <h3 className="mt-7 font-serif text-lg font-semibold  text-foreground transition-colors duration-300 group-hover:text-primary sm:text-xl">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-xs  text-foreground/45 sm:text-sm ">

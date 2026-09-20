@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 import { ScrollTrigger } from "gsap/all";
+import { siteConfig } from "@/src/config/site";
 
 const highlights: string[] = [
   "কুরআন ও সুন্নাহভিত্তিক শিক্ষা",
@@ -133,7 +134,7 @@ export default function WelcomeMessage() {
           <div className="welcome-content w-full lg:w-3/5 lg:pl-4">
             <SectionHeader
               label="আমাদের পরিচিতি"
-              headingLine1="মাদরাসা-ই-দারুল হুদা"
+              headingLine1={siteConfig.name}
               headingLine2="এবং আমাদের লক্ষ্য"
             />
 

@@ -56,7 +56,7 @@ export default function AboutHero() {
               </span>
             </div>
 
-            <h1 className="mt-6 max-w-3xl font-serif text-4xl font-semibold leading-[1.15] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 max-w-3xl font-serif text-4xl font-semibold leading-[1.15]  text-foreground sm:text-5xl md:text-6xl">
               {cleanData.title}
             </h1>
 

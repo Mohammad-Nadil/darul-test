@@ -89,7 +89,7 @@ export default function SectionHeader({
         </span>
       </div>
 
-      <h2 className="section-heading font-serif text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+      <h2 className="section-heading font-serif text-3xl font-semibold  text-foreground sm:text-4xl lg:text-5xl">
         {headingLine1}
         <span className="block text-primary">{headingLine2}</span>
       </h2>

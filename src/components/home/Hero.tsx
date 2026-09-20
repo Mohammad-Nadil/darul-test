@@ -104,12 +104,12 @@ export default function Hero() {
       <Container className="w-full relative z-30">
         <div className="text-left space-y-6 sm:space-y-8">
           <div className="js-hero-content-anim flex items-center gap-2 border-l-2 border-primary pl-3">
-            <span className="text-primary text-xs font-bold uppercase tracking-widest font-sans">
+            <span className="text-primary text-xs font-bold uppercase  font-sans">
               {cleanData.slides[currentSlide].tag}
             </span>
           </div>
 
-          <h1 className="js-hero-content-anim text-2xl  sm:text-5xl md:text-6xl xl:text-[85px] font-serif font-semibold text-white tracking-wide leading-[1.15]">
+          <h1 className="js-hero-content-anim text-2xl  sm:text-5xl md:text-6xl xl:text-[85px] font-serif font-semibold text-white  leading-[1.15]">
             <>
               {cleanData.slides[currentSlide].titleLine1}
               <br />

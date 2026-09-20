@@ -66,11 +66,11 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex flex-col">
-                  <span className="font-serif font-bold leading-tight tracking-wide text-primary text-xl">
+                  <span className="font-serif font-bold leading-tight  text-primary text-xl">
                     {siteConfig.name}
                   </span>
 
-                  <span className="mt-0.5 text-[10px] sm:text-xs  tracking-wide  ">
+                  <span className="mt-0.5 text-[10px] sm:text-xs    ">
                     {siteConfig.slogan}
                   </span>
                 </div>

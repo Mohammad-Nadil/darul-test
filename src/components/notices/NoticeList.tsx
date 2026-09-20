@@ -316,7 +316,7 @@ export default function NoticeList() {
 
               <h2
                 id="notice-modal-title"
-                className="mt-5 pr-6 font-serif text-2xl font-semibold leading-tight tracking-tight sm:text-3xl"
+                className="mt-5 pr-6 font-serif text-2xl font-semibold leading-tight  sm:text-3xl"
               >
                 {selectedNotice.title}
               </h2>

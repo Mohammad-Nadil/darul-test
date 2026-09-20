@@ -124,7 +124,7 @@ export default function Departments() {
               </span>
 
               <div className="absolute bottom-0 left-0 right-0 flex flex-col justify-end p-3 transition-transform duration-500 md:group-hover:-translate-y-1 sm:p-4">
-                <h3 className="font-serif text-lg font-bold tracking-tight text-white sm:text-xl md:text-2xl">
+                <h3 className="font-serif text-lg font-bold  text-white sm:text-xl md:text-2xl">
                   {item.title}
                 </h3>
 

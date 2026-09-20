@@ -89,7 +89,7 @@ export default function Footer() {
       <Container>
         <div className="grid grid-cols-1 gap-8 border-b border-border pb-8 md:grid-cols-2 lg:grid-cols-12">
           <div className="flex flex-col gap-6 lg:col-span-4">
-            <div className="select-none text-xl font-bold leading-tight tracking-tight text-foreground md:text-2xl">
+            <div className="select-none text-xl font-bold leading-tight  text-foreground md:text-2xl">
               {siteConfig.name}
             </div>
 
@@ -117,7 +117,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2 lg:ml-6">
-            <h4 className="relative mb-6 select-none font-sans text-xs font-bold tracking-widest text-foreground">
+            <h4 className="relative mb-6 select-none font-sans text-xs font-bold  text-foreground">
               {cleanData.explore}
 
               <span className="absolute bottom-[-6px] left-0 h-0.5 w-6 rounded-full bg-accent" />
@@ -135,21 +135,21 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3 lg:ml-4">
-            <h4 className="relative mb-6 select-none font-sans text-xs font-bold tracking-widest text-foreground">
+            <h4 className="relative mb-6 select-none font-sans text-sm font-bold  text-foreground">
               {cleanData.contact}
 
               <span className="absolute -bottom-2 left-0 h-0.5 w-6 rounded-full bg-accent" />
             </h4>
 
             <ul className="flex flex-col gap-3 lg:gap-4.5">
-              {siteConfig.contact.address && (
+              {siteConfig.contact.address.male && (
                 <li className="group flex items-start gap-3.5">
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary-light transition-colors duration-300 group-hover:bg-primary/10">
                     <FiMapPin className="h-4 w-4 shrink-0 text-primary" />
                   </div>
 
                   <span className="pt-0.5 font-sans text-sm font-light leading-relaxed text-muted transition-colors duration-300 group-hover:text-foreground">
-                    {siteConfig.contact.address}
+                    {siteConfig.contact.address.male}
                   </span>
                 </li>
               )}
@@ -177,7 +177,7 @@ export default function Footer() {
 
                   <a
                     href={`mailto:${siteConfig.contact.email}`}
-                    className="break-all pt-0.5 font-sans text-sm font-light text-muted transition-colors duration-300 group-hover:text-foreground"
+                    className="break-all pt-0.5 font-sans text-xs font-light text-muted transition-colors duration-300 group-hover:text-foreground"
                   >
                     {siteConfig.contact.email}
                   </a>
@@ -187,7 +187,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col lg:col-span-3">
-            <h4 className="relative mb-6 select-none font-sans text-xs font-bold tracking-widest text-foreground">
+            <h4 className="relative mb-6 select-none font-sans text-xs font-bold  text-foreground">
               {cleanData.location}
 
               <span className="absolute bottom-[-6px] left-0 h-0.5 w-6 rounded-full bg-accent" />

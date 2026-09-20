@@ -89,11 +89,11 @@ export default function ResultDisplay({ data }: ResultDisplayProps) {
       <div className="border-b border-border  py-6 sm:px-7 sm:py-7 md:px-8">
         <div className="flex  gap-6  items-center justify-between">
           <div>
-            <span className="inline-flex rounded-full bg-primary/[0.07] px-3 py-1 text-[10px] font-semibold tracking-wide text-primary">
+            <span className="inline-flex rounded-full bg-primary/[0.07] px-3 py-1 text-[10px] font-semibold  text-primary">
               {data.examType}
             </span>
 
-            <h2 className="mt-4 font-serif text-xl font-bold tracking-tight text-foreground sm:text-3xl">
+            <h2 className="mt-4 font-serif text-xl font-bold  text-foreground sm:text-3xl">
               {data.name}
             </h2>
 
@@ -106,7 +106,7 @@ export default function ResultDisplay({ data }: ResultDisplayProps) {
 
           {/* GPA */}
           <div className="flex w-fit items-center gap-4 rounded-xl border border-primary/10 bg-primary/[0.035] px-5 py-3 sm:min-w-32 flex-col sm:gap-0 sm:px-6 sm:py-4 sm:text-center">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-foreground/35">
+            <p className="text-[10px] font-semibold uppercase .14em] text-foreground/35">
               GPA
             </p>
 

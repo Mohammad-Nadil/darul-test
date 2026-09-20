@@ -1,4 +1,5 @@
 import AboutHero from "@/src/components/about/AboutHero";
+import Branches from "@/src/components/about/Branches";
 import Departments from "@/src/components/about/Departments";
 import LeadershipTeam from "@/src/components/about/LeadershipTeam";
 import OurStory from "@/src/components/about/OurStory";
@@ -34,6 +35,7 @@ export default function AboutPage() {
       <OurStory />
       <LeadershipTeam />
       <Departments />
+      <Branches />
       <StatsMetric />
     </main>
   );

@@ -32,7 +32,7 @@ const contactInfo = [
   {
     icon: FiMapPin,
     label: "ঠিকানা",
-    value: siteConfig.contact.address,
+    value: siteConfig.contact.address.male,
     href: "#location",
   },
   {
@@ -147,11 +147,11 @@ export default function ContactInfo() {
           {/* RIGHT — Form */}
           <div className="contact-reveal w-full rounded-2xl border border-border bg-subtle/30 p-5 sm:p-7 lg:w-[58%] lg:p-8">
             <div className="mb-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+              <p className="text-xs font-semibold uppercase  text-accent">
                 আপনার বার্তা
               </p>
 
-              <h3 className="mt-2 font-serif text-2xl font-semibold tracking-tight">
+              <h3 className="mt-2 font-serif text-2xl font-semibold ">
                 কীভাবে সাহায্য করতে পারি?
               </h3>
             </div>

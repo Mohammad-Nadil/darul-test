@@ -108,7 +108,7 @@ export default function LeadershipTeam() {
 
               {/* Content */}
               <div className="mt-6">
-                <span className="text-[11px] font-semibold tracking-wide text-accent">
+                <span className="text-[11px] font-semibold  text-accent">
                   {leader.role}
                 </span>
 
