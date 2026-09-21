@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 
 type Props = {
@@ -11,6 +12,8 @@ type Props = {
   headingLine2: string;
   className?: string;
 };
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function SectionHeader({
   label,

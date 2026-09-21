@@ -1,5 +1,5 @@
 "use client";
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
@@ -8,7 +8,7 @@ const faqs = [
     id: 1,
     question: "মাদরাসায় কোন কোন বিভাগে শিক্ষা দেওয়া হয়?",
     answer:
-      "মক্তব, নূরানী, নাজেরা, হিফজুল কুরআন, বিশেষ নাজেরা ও কিতাবসহ বিভিন্ন বিভাগে শিক্ষার ব্যবস্থা রয়েছে।",
+      "মক্তব, নূরানী, নাযেরা, হিফজুল কুরআন, বিশেষ নাযেরা ও কিতাবসহ বিভিন্ন বিভাগে শিক্ষার ব্যবস্থা রয়েছে।",
   },
   {
     id: 2,
@@ -56,9 +56,7 @@ export default function ContactFAQ() {
                     aria-expanded={isOpen}
                     className="flex w-full items-center gap-5 py-5 text-left sm:py-6"
                   >
-                    <span className=" text-primary">
-                      ۞
-                    </span>
+                    <span className=" text-primary">۞</span>
                     <span className="flex-1 text-sm font-semibold text-foreground sm:text-base">
                       {faq.question}
                     </span>

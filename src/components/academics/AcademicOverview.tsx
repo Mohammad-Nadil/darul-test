@@ -19,9 +19,9 @@ const academicStages = [
   },
   {
     number: "০৩",
-    title: "নাজেরা বিভাগ",
+    title: "নাযেরা বিভাগ",
     description:
-      "কুরআন মাজীদ সহীহ ও সাবলীলভাবে পড়ার জন্য নিয়মিত নাজেরা ও তিলাওয়াতের অনুশীলন।",
+      "কুরআন মাজীদ সহীহ ও সাবলীলভাবে পড়ার জন্য নিয়মিত নাযেরা ও তিলাওয়াতের অনুশীলন।",
   },
   {
     number: "০৪",
@@ -31,9 +31,9 @@ const academicStages = [
   },
   {
     number: "০৫",
-    title: "বিশেষ নাজেরা",
+    title: "বিশেষ নাযেরা",
     description:
-      "নাজেরা ও তিলাওয়াত আরও সুদৃঢ় করার জন্য বিশেষভাবে পরিচালিত শিক্ষা কার্যক্রম।",
+      "নাযেরা ও তিলাওয়াত আরও সুদৃঢ় করার জন্য বিশেষভাবে পরিচালিত শিক্ষা কার্যক্রম।",
   },
   {
     number: "০৬",
@@ -69,9 +69,7 @@ export default function AcademicOverview() {
               key={stage.number}
               className="academic-stage flex  gap-3  border-b border-border py-3"
             >
-              <span className="pt-1  font-medium text-primary">
-                ۞
-              </span>
+              <span className="pt-1  font-medium text-primary">۞</span>
 
               <div>
                 <h3 className="text-lg font-semibold text-foreground ">
