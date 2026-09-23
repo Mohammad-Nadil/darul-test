@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 
 type ButtonSize = "sm" | "md" | "lg";
+type ButtonType = "button" | "submit" | "reset";
 
 interface ButtonProps {
   label: string;
@@ -18,6 +19,7 @@ interface ButtonProps {
   href?: string;
   target?: "_self" | "_blank" | "_parent" | "_top";
   disabled?: boolean;
+  type?: ButtonType;
   size?: ButtonSize;
   className?: string;
   ariaLabel?: string;
@@ -41,6 +43,7 @@ export default function Button({
   href,
   target,
   disabled = false,
+  type = "button",
   size = "md",
   className = "",
   ariaLabel,
@@ -77,7 +80,7 @@ export default function Button({
 
       <span
         style={textStyles}
-        className="relative z-10 inline-flex items-center gap-[inherit] whitespace-nowrap leading-none text-[var(--text-color)] transition-colors duration-300 group-hover:text-[var(--text-hover)]"
+        className="relative z-10 inline-flex items-center gap-[inherit] whitespace-nowrap leading-none text-(--text-color) transition-colors duration-300 group-hover:text-(--text-hover)"
       >
         {leftIcon && (
           <span className="inline-flex items-center text-[1.15em]">
@@ -118,7 +121,7 @@ export default function Button({
 
   return (
     <button
-      type="button"
+      type={type}
       disabled={disabled}
       onClick={onClick}
       aria-label={ariaLabel || label}
