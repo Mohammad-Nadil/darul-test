@@ -1,5 +1,6 @@
 import Container from "@/src/components/layout/Container";
 import NoticeList from "@/src/components/notices/NoticeList";
+import ComingSoon from "@/src/components/ui/ComingSoon";
 import SectionHeader from "@/src/components/ui/SectionHeader";
 import { siteConfig } from "@/src/config/site";
 import type { Metadata } from "next";
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function NoticePage() {
   return (
-    <main className="w-full  py-12 md:py-14 bg-background text-foreground">
+    <main className="w-full  pt-12 md:pt-14 bg-background text-foreground">
       <Container>
         <SectionHeader
           label="ঘোষণা ও নোটিশ"
@@ -37,7 +38,8 @@ export default function NoticePage() {
           headingLine2="নোটিশ ও ঘোষণা"
           className="flex flex-col items-center justify-center mx-auto w-full text-center"
         />
-        <NoticeList />
+        {/* <NoticeList /> */}
+        <ComingSoon />
       </Container>
     </main>
   );

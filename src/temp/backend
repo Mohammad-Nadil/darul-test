@@ -1,0 +1,22 @@
+/api
+├── auth
+│
+├── students
+│   ├── GET
+│   ├── POST
+│   └── [id]
+│
+├── results
+│   ├── GET
+│   ├── POST
+│   └── [id]
+│
+├── fees
+│   ├── GET
+│   ├── POST
+│   └── [id]
+│
+└── notices
+    ├── GET
+    ├── POST
+    └── [id]
