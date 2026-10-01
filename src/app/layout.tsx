@@ -45,12 +45,10 @@ export default function PublicLayout({
         suppressHydrationWarning
         className="min-h-full flex flex-col max-w-screen overflow-x-clip mx-auto"
       >
-        <SmoothScrollProvider>
           <Toaster position="top-right" reverseOrder={false} />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
-        </SmoothScrollProvider>
       </body>
     </html>
   );
